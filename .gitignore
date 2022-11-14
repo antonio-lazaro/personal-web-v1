@@ -1,4 +1,15 @@
+# dependencies
 node_modules/
+
+# data
 .cache/
 public
+
+# gatsby
 src/gatsby-types.d.ts
+
+# misc
+.DS_Store
+
+# typescript
+*.tsbuildinfo
