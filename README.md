@@ -4,51 +4,34 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsby minimal TypeScript starter
+  Personal Website
 </h1>
+<p align="center">
+  The first version of personal website
+</p>
 
-## 🚀 Quick start
+## Set Up
 
-1.  **Create a Gatsby site.**
+1. Install the Gatsby CLI.
 
-    Use the Gatsby CLI to create a new site, specifying the minimal TypeScript starter.
+   ```shell
+   npm install -g gatsby-cli
+   ```
 
-    ```shell
-    # create a new Gatsby site using the minimal TypeScript starter
-    npm init gatsby
-    ```
+2. Install the correct version of Node using NVM.
 
-2.  **Start developing.**
+   ```shell
+   nvm install
+   ```
 
-    Navigate into your new site’s directory and start it up.
+3. Install dependencies.
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+   ```shell
+   npm install
+   ```
 
-3.  **Open the code and start customizing!**
+4. Start development server.
 
-    Your site is now running at http://localhost:8000!
-
-    Edit `src/pages/index.tsx` to see your site update in real-time!
-
-4.  **Learn more**
-
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-## 🚀 Quick start (Gatsby Cloud)
-
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
-
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal-ts)
+   ```shell
+   npm start
+   ```
