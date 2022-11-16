@@ -1,6 +1,9 @@
 import { createGlobalStyle } from 'styled-components'
+import variables from './variables'
 
 const GlobalStyle = createGlobalStyle`
+  ${variables};
+
   html {
     box-sizing: border-box;
     width: 100%;
@@ -20,10 +23,26 @@ const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
+    background-color: var(--white);
+    color: var(--dark-grey);
+    font-family: var(--font-sans);
   }
 
   #root {
     min-height: 100vh;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
   }
 `
 
