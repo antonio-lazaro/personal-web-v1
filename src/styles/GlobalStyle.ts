@@ -44,6 +44,21 @@ const GlobalStyle = createGlobalStyle`
   p {
     margin: 0;
   }
+
+  .icon {
+    color: #C2C2C2;
+    width: 20px;
+    aspect-ratio: 1;
+
+    &:hover {
+      color: #A6A6A6;
+    }
+  }
+
+  blockquote {
+    margin: 0;
+    font-family: var(--font-serif);
+  }
 `
 
 export default GlobalStyle
