@@ -4,6 +4,10 @@ import styled from 'styled-components'
 const StyledSearchInput = styled.div`
   width: 100%;
   margin-top: 17px;
+
+  @media (${({ theme }) => theme.bp.tabletS}) {
+    margin-top: 15px;
+  }
 `
 const TextArea = styled.textarea`
   width: 100%;
@@ -17,6 +21,18 @@ const TextArea = styled.textarea`
 
   &::placeholder {
     color: #d1d1d1;
+  }
+
+  @media (${({ theme }) => theme.bp.desktopS}) {
+    font-size: 41px;
+  }
+
+  @media (${({ theme }) => theme.bp.desktopS}) and (orientation: landscape) {
+    font-size: 50px;
+  }
+
+  @media (${({ theme }) => theme.bp.tabletS}) {
+    font-size: 41px;
   }
 `
 
@@ -74,6 +90,7 @@ const SearchInput = () => {
         placeholder="Write what you want to know..."
         value={searchText}
         onChange={(e) => setSearchText(e.target.value)}
+        rows={1}
       />
 
       <SuggestionsContainer>

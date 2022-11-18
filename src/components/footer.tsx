@@ -24,6 +24,14 @@ const StyledText = styled.p`
       color: #4c4c4c;
     }
   }
+
+  @media (${({ theme }) => theme.bp.desktopS}) and (orientation: landscape) {
+    font-size: 14px;
+  }
+
+  @media (${({ theme }) => theme.bp.tabletS}) {
+    font-size: 14px;
+  }
 `
 
 const Footer = () => {

@@ -8,8 +8,24 @@ const StyledSearch = styled.div`
   margin: 0 auto;
   width: 1015px;
   max-width: 1240px;
-  padding-left: 22px;
-  padding-right: 22px;
+  padding: 0 22px;
+  padding-top: 50px;
+
+  @media (${({ theme }) => theme.bp.desktopS}) {
+    margin: 0;
+    width: auto;
+    padding: 0 35px;
+    padding-top: 17px;
+  }
+
+  @media (${({ theme }) => theme.bp.desktopS}) and (orientation: landscape) {
+    padding-top: 20px;
+  }
+
+  @media (${({ theme }) => theme.bp.tabletS}) {
+    padding: 0 20px;
+    padding-top: 30px;
+  }
 `
 
 const Intro = styled.div`
@@ -17,7 +33,11 @@ const Intro = styled.div`
   flex-direction: row;
   align-items: baseline;
   gap: 10.5px;
-  margin-top: 70px;
+
+  @media (${({ theme }) => theme.bp.tabletS}) {
+    gap: 5px;
+    flex-direction: column;
+  }
 `
 
 const Greeting = styled.p`
@@ -27,6 +47,14 @@ const Greeting = styled.p`
   span {
     font-weight: 600;
   }
+
+  @media (${({ theme }) => theme.bp.desktopS}) {
+    font-size: 19px;
+  }
+
+  @media (${({ theme }) => theme.bp.tabletS}) {
+    font-size: 19px;
+  }
 `
 
 const Profession = styled.p`
@@ -34,6 +62,10 @@ const Profession = styled.p`
   font-weight: 700;
   color: #c3c3c3;
   letter-spacing: 0.03px;
+
+  @media (${({ theme }) => theme.bp.tabletS}) {
+    font-size: 12px;
+  }
 `
 
 const Search = () => {

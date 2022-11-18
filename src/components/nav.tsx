@@ -1,14 +1,32 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import DownloadCVButton from './download-button'
 import Logo from './icons/Logo'
 import SocialLinks from './social'
 
 const StyledNavBarContainer = styled.div`
-  padding-left: 39px;
-  padding-right: 39px;
   width: 100%;
   height: 87px;
+  padding: 0 39px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+
+  @media (${({ theme }) => theme.bp.desktopS}) {
+    padding: 0 30px;
+  }
+
+  @media (${({ theme }) => theme.bp.desktopS}) and (orientation: landscape) {
+    height: 64px;
+    padding: 0 15px;
+  }
+
+  @media (${({ theme }) => theme.bp.tabletS}) {
+    height: 64px;
+    padding: 0 15px;
+  }
 `
 
 const StyledFlexDiv = styled.div`
@@ -26,6 +44,14 @@ const StyledLeftContainer = styled.div`
   align-items: center;
   height: 100%;
   padding-left: 10px;
+
+  @media (${({ theme }) => theme.bp.desktopS}) {
+    padding-left: 5px;
+  }
+
+  @media (${({ theme }) => theme.bp.tabletS}) {
+    padding-left: 5px;
+  }
 `
 
 const StyledFillDiv = styled.div`
@@ -39,6 +65,27 @@ const StyledRightContainer = styled.div`
   flex-direction: row;
   align-items: center;
   gap: 38px;
+
+  @media (${({ theme }) => theme.bp.tabletS}) {
+    gap: 25px;
+  }
+`
+
+const StyledButton = styled.button`
+  background-color: #111111;
+  font-size: 14px;
+  font-weight: 550;
+  color: var(--white);
+  padding: 10px 35px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+
+  @media (${({ theme }) => theme.bp.tabletS}) {
+    padding: 10px 25px;
+    border-radius: 7px;
+  }
 `
 
 const NavBar = () => {
@@ -55,7 +102,7 @@ const NavBar = () => {
 
         <StyledRightContainer>
           <SocialLinks />
-          <DownloadCVButton />
+          <StyledButton>Download CV</StyledButton>
         </StyledRightContainer>
       </StyledFlexDiv>
     </StyledNavBarContainer>
