@@ -12,16 +12,17 @@ const StyledText = styled.p`
   font-size: 17px;
   font-weight: 400;
   font-family: Avenir;
-  color: #9a9a9a;
+  color: ${({ theme }) => theme.colors.footerText};
 
   a {
     font-weight: 500;
-    color: var(--dark-grey);
+    color: ${({ theme }) => theme.colors.footerHighlightedText};
     text-decoration: none;
     cursor: pointer;
 
     &:hover {
-      color: #4c4c4c;
+      color: ${({ theme }) =>
+        `rgba(${theme.colors.footerHighlightedText}, 0.7)`};
     }
   }
 

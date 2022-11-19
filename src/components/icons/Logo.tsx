@@ -15,7 +15,7 @@ const Logo = () => {
         <g
           id="Home"
           transform="translate(-51.000000, -34.000000)"
-          fill="#111111"
+          fill="currentColor"
           fillRule="nonzero"
         >
           <g id="AL" transform="translate(51.000000, 34.000000)">

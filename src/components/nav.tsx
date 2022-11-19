@@ -11,7 +11,7 @@ const StyledNavBarContainer = styled.div`
   top: 0;
   left: 0;
   z-index: 9999;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: ${({ theme }) => `rgba(${theme.colors.bg}, 0.8)`};
   backdrop-filter: blur(10px);
 
   @media (${({ theme }) => theme.bp.desktopS}) {
@@ -72,10 +72,10 @@ const StyledRightContainer = styled.div`
 `
 
 const StyledButton = styled.button`
-  background-color: #111111;
+  background-color: ${({ theme }) => theme.colors.btnBg};
   font-size: 14px;
   font-weight: 550;
-  color: var(--white);
+  color: ${({ theme }) => theme.colors.btnText};
   padding: 10px 35px;
   border: none;
   border-radius: 5px;

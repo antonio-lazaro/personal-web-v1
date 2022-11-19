@@ -60,7 +60,7 @@ const Greeting = styled.p`
 const Profession = styled.p`
   font-size: 14px;
   font-weight: 700;
-  color: #c3c3c3;
+  color: ${({ theme }) => theme.colors.secondaryText};
   letter-spacing: 0.03px;
 
   @media (${({ theme }) => theme.bp.tabletS}) {

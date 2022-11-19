@@ -1,7 +1,8 @@
 import { createGlobalStyle } from 'styled-components'
 import variables from './variables'
+import { lightTheme } from './theme'
 
-const GlobalStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle<{ theme: typeof lightTheme }>`
   ${variables};
 
   html {
@@ -23,9 +24,10 @@ const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    background-color: var(--white);
-    color: var(--dark-grey);
+    background-color: ${({ theme }) => theme.colors.bg};
+    color: ${({ theme }) => theme.colors.primaryText};
     font-family: var(--font-sans);
+    transition: background 0.3s;
   }
 
   #root {
@@ -46,7 +48,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .icon {
-    color: #C2C2C2;
+    color: ${({ theme }) => theme.colors.icon};
     width: 20px;
     aspect-ratio: 1;
 
@@ -58,6 +60,10 @@ const GlobalStyle = createGlobalStyle`
   blockquote {
     margin: 0;
     font-family: var(--font-serif);
+  }
+
+  a {
+    color: ${({ theme }) => theme.colors.primaryText}
   }
 `
 

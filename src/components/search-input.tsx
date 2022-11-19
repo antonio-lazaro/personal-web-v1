@@ -18,9 +18,12 @@ const TextArea = styled.textarea`
   font-weight: 700;
   resize: none;
   overflow-y: hidden;
+  background-color: transparent;
+  padding: 0;
+  color: ${({ theme }) => theme.colors.primaryText};
 
   &::placeholder {
-    color: #d1d1d1;
+    color: ${({ theme }) => theme.colors.placeholder};
   }
 
   @media (${({ theme }) => theme.bp.desktopS}) {
@@ -51,14 +54,14 @@ const Suggestion = styled.button`
   padding-left: 14px;
   padding-right: 14px;
   border: none;
-  color: #3e3e3e;
-  background-color: #ededed;
+  color: ${({ theme }) => theme.colors.suggestionText};
+  background-color: ${({ theme }) => theme.colors.suggestionBg};
   font-size: 12px;
   font-weight: 550;
   cursor: pointer;
 
   &.selected {
-    color: var(--white);
+    color: #fff;
     background-color: #4694ff;
   }
 `
