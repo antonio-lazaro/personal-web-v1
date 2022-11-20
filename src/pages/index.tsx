@@ -5,6 +5,7 @@ import NavBar from '../components/nav'
 import Search from '../components/search'
 import Footer from '../components/footer'
 import styled from 'styled-components'
+import SEO from '../components/seo'
 
 const Flex = styled.div`
   display: flex;
@@ -27,4 +28,4 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage
 
-export const Head: HeadFC = () => <title>Antonio Lázaro</title>
+export const Head: HeadFC = () => <SEO title="Antonio Lázaro" />
