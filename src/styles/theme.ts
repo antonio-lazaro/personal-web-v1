@@ -24,6 +24,8 @@ const lightColors = {
   suggestionText: '#3e3e3e',
   footerText: '#9a9a9a',
   footerHighlightedText: '#4c4c4c',
+  border: '#e4e4e4',
+  postParagraph: '#3D3D3D',
 }
 
 const darkColors = {
@@ -37,7 +39,9 @@ const darkColors = {
   suggestionBg: '#1f242f',
   suggestionText: '#989ba0',
   footerText: '#73767d',
-  footerHighlightedText: '#bEbfc2',
+  footerHighlightedText: '#bebfc2',
+  border: '#262a35',
+  postParagraph: '#999ca1',
 }
 
 export const lightTheme = {

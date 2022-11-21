@@ -11,12 +11,17 @@ const config: GatsbyConfig = {
   graphqlTypegen: true,
   plugins: [
     'gatsby-plugin-styled-components',
-    'gatsby-plugin-mdx',
+    {
+      resolve: 'gatsby-plugin-mdx',
+      options: {
+        extensions: ['.mdx', '.md'],
+      },
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'pages',
-        path: './src/pages/',
+        name: 'posts',
+        path: './content/posts/',
       },
       __key: 'pages',
     },
