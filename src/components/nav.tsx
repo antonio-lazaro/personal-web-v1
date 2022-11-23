@@ -1,3 +1,4 @@
+import { Link } from 'gatsby'
 import * as React from 'react'
 import styled from 'styled-components'
 import Logo from './icons/Logo'
@@ -93,9 +94,9 @@ const NavBar = () => {
     <StyledNavBarContainer>
       <StyledFlexDiv>
         <StyledLeftContainer>
-          <a href="/">
+          <Link to="/">
             <Logo />
-          </a>
+          </Link>
         </StyledLeftContainer>
 
         <StyledFillDiv />
