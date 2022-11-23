@@ -3,7 +3,11 @@ import { useEffect, useState } from 'react'
 export const usePrefersColorScheme = () => {
   const [preferredColorSchema, setPreferredColorSchema] = useState<
     'dark' | 'light'
-  >('light')
+  >(() => {
+    if (typeof window === 'undefined') return 'light'
+    const isDark = window.matchMedia('(prefers-color-scheme: dark)')
+    return isDark.matches ? 'dark' : 'light'
+  })
 
   useEffect(() => {
     if (!window.matchMedia) return
