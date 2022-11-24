@@ -16,13 +16,13 @@ const Flex = styled.div`
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
-    <Layout>
+    <>
       <Flex>
         <NavBar />
         <Search />
         <Footer />
       </Flex>
-    </Layout>
+    </>
   )
 }
 

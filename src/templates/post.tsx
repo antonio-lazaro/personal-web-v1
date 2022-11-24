@@ -52,7 +52,7 @@ interface Props {
 
 const PostTemplate = ({ data, children }: Props) => {
   return (
-    <Layout>
+    <>
       <Flex>
         <NavBar />
         <Content>
@@ -67,7 +67,7 @@ const PostTemplate = ({ data, children }: Props) => {
         </Content>
         <Footer />
       </Flex>
-    </Layout>
+    </>
   )
 }
 

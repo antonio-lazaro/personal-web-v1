@@ -74,7 +74,7 @@ const HomeLink = styled.div`
 
 const NotFoundPage: React.FC<PageProps> = () => {
   return (
-    <Layout>
+    <>
       <Flex>
         <NavBar />
         <Content>
@@ -89,7 +89,7 @@ const NotFoundPage: React.FC<PageProps> = () => {
         </Content>
         <Footer />
       </Flex>
-    </Layout>
+    </>
   )
 }
 
