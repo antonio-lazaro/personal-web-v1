@@ -10,6 +10,8 @@
   The first version of personal website
 </p>
 
+![preview](src/images/preview.png)
+
 ## Set Up
 
 1. Install the Gatsby CLI.
