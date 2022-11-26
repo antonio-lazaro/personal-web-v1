@@ -12,8 +12,8 @@ const StyledNavBarContainer = styled.div`
   top: 0;
   left: 0;
   z-index: 9999;
-  background-color: ${({ theme }) => `rgba(${theme.colors.bg}, 0.8)`};
-  backdrop-filter: blur(10px);
+  background-color: ${({ theme }) => `${theme.colors.bg}b3`}; // 70% opacity
+  backdrop-filter: blur(26px);
 
   @media (${({ theme }) => theme.bp.desktopS}) {
     padding: 0 30px;

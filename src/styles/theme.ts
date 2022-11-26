@@ -13,13 +13,13 @@ const baseTheme = {
 }
 
 const lightColors = {
-  bg: '#fff',
-  primaryText: '#111',
+  bg: '#ffffff',
+  primaryText: '#111111',
   secondaryText: '#c3c3c3',
   placeholder: '#d1d1d1',
   icon: '#c2c2c2',
-  btnBg: '#111',
-  btnText: '#fff',
+  btnBg: '#111111',
+  btnText: '#ffffff',
   suggestionBg: '#ededed',
   suggestionText: '#3e3e3e',
   footerText: '#9a9a9a',

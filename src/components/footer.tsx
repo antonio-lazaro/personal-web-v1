@@ -22,7 +22,7 @@ const StyledText = styled.p`
 
     &:hover {
       color: ${({ theme }) =>
-        `rgba(${theme.colors.footerHighlightedText}, 0.7)`};
+        `${theme.colors.footerHighlightedText}b3`}; // 70% opacity
     }
   }
 
