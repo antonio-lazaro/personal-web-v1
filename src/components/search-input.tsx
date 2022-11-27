@@ -72,8 +72,15 @@ const SUGGESTIONS = [
   'What the hell are you doing?',
 ]
 
-const SearchInput = () => {
+interface Props {
+  onChange?: (text: string) => void
+  onStartTyping?: () => void
+  onEndTyping?: () => void
+}
+
+const SearchInput = ({ onChange, onStartTyping, onEndTyping }: Props) => {
   const [searchText, setSearchText] = useState('')
+  const [isTyping, setIsTyping] = useState(false)
   const textAreaRef = useRef(null)
 
   const resizeTextArea = () => {
@@ -86,13 +93,28 @@ const SearchInput = () => {
 
   useEffect(resizeTextArea, [searchText])
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsTyping(false)
+      if (onEndTyping) onEndTyping()
+    }, 500)
+    return () => clearTimeout(timer)
+  }, [searchText])
+
   return (
     <StyledSearchInput>
       <TextArea
         ref={textAreaRef}
         placeholder="Write what you want to know..."
         value={searchText}
-        onChange={(e) => setSearchText(e.target.value)}
+        onChange={(e) => {
+          if (!isTyping) {
+            setIsTyping(true)
+            if (onStartTyping) onStartTyping()
+          }
+          setSearchText(e.target.value)
+          if (onChange) onChange(e.target.value)
+        }}
         rows={1}
       />
 

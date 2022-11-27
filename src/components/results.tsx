@@ -1,5 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
+import LoadingIcon from './icons/LoadingIcon'
 
 const StyledResults = styled.div`
   width: 100%;
@@ -26,12 +27,23 @@ const Answer = styled.p`
   }
 `
 
-const Results = () => {
+interface Props {
+  isTyping: boolean
+  searchText: string
+}
+
+const Results = ({ isTyping, searchText }: Props) => {
   return (
     <StyledResults>
-      <Answer>
-        I studied Telecommunications Engineering in Madrid, Spain.
-      </Answer>
+      {searchText === '' ? (
+        <Answer>
+          Ask me any thing. Well... not ANY THING, but you got me.
+        </Answer>
+      ) : isTyping ? (
+        <LoadingIcon />
+      ) : (
+        <Answer>Answer</Answer>
+      )}
     </StyledResults>
   )
 }

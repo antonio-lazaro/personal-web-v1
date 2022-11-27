@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import Results from './results'
 import SearchInput from './search-input'
@@ -69,6 +69,9 @@ const Profession = styled.p`
 `
 
 const Search = () => {
+  const [searchText, setSearchText] = useState('')
+  const [isTyping, setIsTyping] = useState(false)
+
   return (
     <StyledSearch>
       <Intro>
@@ -78,9 +81,13 @@ const Search = () => {
         <Profession>SOFTWARE / ML ENGINEER</Profession>
       </Intro>
 
-      <SearchInput />
+      <SearchInput
+        onChange={(text) => setSearchText(text)}
+        onStartTyping={() => setIsTyping(true)}
+        onEndTyping={() => setIsTyping(false)}
+      />
 
-      <Results />
+      <Results searchText={searchText} isTyping={isTyping} />
     </StyledSearch>
   )
 }
