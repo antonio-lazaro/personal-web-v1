@@ -122,7 +122,11 @@ const SearchInput = ({ onChange, onStartTyping, onEndTyping }: Props) => {
         {SUGGESTIONS.map((text) => (
           <Suggestion
             key={text}
-            onClick={() => setSearchText(text === searchText ? '' : text)}
+            onClick={() => {
+              const newSearchText = text === searchText ? '' : text
+              setSearchText(newSearchText)
+              if (onChange) onChange(newSearchText)
+            }}
             className={text === searchText ? 'selected' : ''}
           >
             {text}
