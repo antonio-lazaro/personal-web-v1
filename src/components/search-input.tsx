@@ -83,6 +83,33 @@ const SearchInput = ({ onChange, onStartTyping, onEndTyping }: Props) => {
   const [isTyping, setIsTyping] = useState(false)
   const textAreaRef = useRef(null)
 
+  const [dimensions, setDimensions] = React.useState(() => {
+    if (typeof window !== 'undefined') {
+      return {
+        width: window.innerWidth,
+        height: window.innerHeight,
+      }
+    }
+    return {
+      width: null,
+      height: null,
+    }
+  })
+
+  const handleResize = () => {
+    if (typeof window !== 'undefined') {
+      setDimensions({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      })
+    }
+  }
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window?.addEventListener('resize', handleResize, false)
+    }
+  }, [])
+
   const resizeTextArea = () => {
     if (textAreaRef.current) {
       ;(textAreaRef.current as HTMLTextAreaElement).style.height = 'auto'
@@ -91,7 +118,7 @@ const SearchInput = ({ onChange, onStartTyping, onEndTyping }: Props) => {
     }
   }
 
-  useEffect(resizeTextArea, [searchText])
+  useEffect(resizeTextArea, [searchText, dimensions])
 
   useEffect(() => {
     const timer = setTimeout(() => {
