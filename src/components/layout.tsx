@@ -23,7 +23,3 @@ const Layout = ({ children }: Props) => {
 }
 
 export default Layout
-
-export const Head = () => {
-  return <title>Hello World</title>
-}
