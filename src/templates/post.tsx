@@ -1,7 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { MDXProvider } from '@mdx-js/react'
-import Layout from '../components/layout'
 import styled from 'styled-components'
 import NavBar from '../components/nav'
 import Footer from '../components/footer'

@@ -1,7 +1,6 @@
 import * as React from 'react'
 import { Link, HeadFC, PageProps } from 'gatsby'
 import styled from 'styled-components'
-import Layout from '../components/layout'
 import Footer from '../components/footer'
 import NavBar from '../components/nav'
 
