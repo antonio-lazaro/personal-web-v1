@@ -2,10 +2,14 @@
   "name": "personal-website",
   "version": "1.0.0",
   "private": true,
-  "description": "personal-website",
+  "description": "Personal Website developed using Gatsby",
   "author": "Antonio Lázaro",
+  "repository": "https://github.com/antonio-lazaro/personal-website.git",
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "react",
+    "personal",
+    "website"
   ],
   "scripts": {
     "develop": "gatsby develop",
@@ -38,6 +42,7 @@
     "@types/styled-components-react-native": "^5.2.0",
     "@typescript-eslint/eslint-plugin": "^5.43.0",
     "@typescript-eslint/parser": "^5.43.0",
+    "babel-preset-gatsby": "^3.2.0",
     "eslint": "^8.27.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-config-react-app": "^7.0.1",
