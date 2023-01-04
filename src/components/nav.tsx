@@ -1,6 +1,7 @@
 import { Link } from 'gatsby'
 import * as React from 'react'
 import styled from 'styled-components'
+import InDevTag from './dev-tag'
 import Logo from './icons/Logo'
 import SocialLinks from './social'
 
@@ -45,6 +46,7 @@ const StyledLeftContainer = styled.div`
   align-items: center;
   height: 100%;
   padding-left: 10px;
+  gap: 10px;
 
   @media (${({ theme }) => theme.bp.desktopS}) {
     padding-left: 5px;
@@ -97,6 +99,7 @@ const NavBar = () => {
           <Link to="/">
             <Logo />
           </Link>
+          <InDevTag />
         </StyledLeftContainer>
 
         <StyledFillDiv />
