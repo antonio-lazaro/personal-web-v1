@@ -74,7 +74,7 @@ const StyledRightContainer = styled.div`
   }
 `
 
-const StyledButton = styled.button`
+const StyledDownloadButton = styled.a`
   background-color: ${({ theme }) => theme.colors.btnBg};
   font-size: 14px;
   font-weight: 550;
@@ -84,6 +84,7 @@ const StyledButton = styled.button`
   border-radius: 5px;
   outline: none;
   cursor: pointer;
+  text-decoration: none;
 
   @media (${({ theme }) => theme.bp.tabletS}) {
     padding: 10px 25px;
@@ -106,7 +107,9 @@ const NavBar = () => {
 
         <StyledRightContainer>
           <SocialLinks />
-          <StyledButton>Download CV</StyledButton>
+          <StyledDownloadButton href="/cv.pdf">
+            Download CV
+          </StyledDownloadButton>
         </StyledRightContainer>
       </StyledFlexDiv>
     </StyledNavBarContainer>
